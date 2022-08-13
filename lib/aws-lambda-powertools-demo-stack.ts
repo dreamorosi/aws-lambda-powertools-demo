@@ -9,12 +9,19 @@ export class AwsLambdaPowertoolsDemoStack extends Stack {
     super(scope, id, props);
 
     new NodejsFunction(this, "Lambda", {
-      entry: "lib/repro.ts",
+      entry: "lib/index.ts",
       handler: "handler",
       runtime: Runtime.NODEJS_16_X,
       tracing: Tracing.ACTIVE,
       timeout: Duration.seconds(30),
       logRetention: RetentionDays.ONE_DAY,
+      bundling: {
+        minify: false,
+        sourceMap: true,
+      },
+      environment: {
+        NODE_OPTIONS: "--enable-source-maps",
+      },
     });
   }
 }

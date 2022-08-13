@@ -7,24 +7,24 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "test": "jest --silent",
-    "cdk": "cdk"
+    "test": "jest",
+    "cdk": "cdk",
+    "build:local": "esbuild --bundle lib/index.ts --target=node16 --platform=node --outfile=dist/index.js --sourcemap"
   },
   "devDependencies": {
-    "@aws-lambda-powertools/commons": "^1.0.2",
-    "@aws-lambda-powertools/logger": "^1.0.2",
-    "@types/jest": "^26.0.10",
-    "@types/node": "^10.17.27",
-    "aws-cdk": "2.0.0",
-    "jest": "^26.4.2",
-    "ts-jest": "^26.2.0",
-    "ts-node": "^9.1.1",
+    "@types/jest": "^27.5.2",
+    "@types/node": "10.17.27",
+    "@types/prettier": "2.6.0",
+    "aws-cdk": "2.37.1",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.9.1",
     "typescript": "~3.9.7"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.8.0",
+    "aws-cdk-lib": "2.37.1",
     "constructs": "^10.0.0",
-    "esbuild": "^0.14.11",
-    "source-map-support": "^0.5.16"
+    "esbuild": "^0.15.2",
+    "source-map-support": "^0.5.21"
   }
 }
