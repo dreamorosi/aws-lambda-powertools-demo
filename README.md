@@ -1,14 +1,16 @@
-# Welcome to your CDK TypeScript project!
+# Reproduce the results
 
-This is a blank project for TypeScript development with CDK.
+1. Setup
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+Using node 16.15.0
 
-## Useful commands
+```sh
+npm install
+cdk deploy
+npm run build:local
+node invoke.js
+```
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+2. Then execute the Lambda function that was deployed on AWS
+
+3. Compare local & remote results
