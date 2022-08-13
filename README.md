@@ -31,3 +31,5 @@ Evaluation: [
 Current Node version v16.15.0
 Hello, world
 ```
+
+The code executed in both cases can be found at `lib/index.ts`.
